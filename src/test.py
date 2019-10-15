@@ -9,6 +9,7 @@ search_button = driver.find_element_by_xpath("//form[@id = 'search-form']/fields
 search_field.send_keys("JavaScript")
 search_button.click()
 assert "JavaScript" in driver.title
+assert "Java1Script" in driver.title
 
 driver.quit()
 
