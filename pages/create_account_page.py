@@ -1,6 +1,7 @@
 class SignUp():
 
-#
+    validationError = "Дозволені лише літери (a–z), числа (0–9) та крапки (.)."
+
     def __init__(self, driver):
         self.driver = driver
 

@@ -3,7 +3,7 @@ from sign_in_page import SignInPage
 from create_account_page import SignUp
 import time
 #
-validationError = "Дозволені лише літери (a–z), числа (0–9) та крапки (.)."
+
 user_dictionary = {'fn': 'Alex', 'ln': 'Kardash', 'password': 'Abc123456!'}
 email_list = {'@a.a', 'a@-a.a', 'a@a@a.a', 'a@a'}
 
@@ -29,7 +29,7 @@ def validate_email_field(email):
     create_account_page.username_field(email)
     create_account_page.login()
     time.sleep(1)
-    assert validationError in driver.page_source
+    assert create_account_page.validationError in driver.page_source
 
 for email in email_list:
     validate_email_field(email)
